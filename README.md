@@ -14,3 +14,6 @@ THIS DATAPACK HAS A CORRESPONDING RESOURCEPACK (SandevistanRP)
 
 (TODO:)  
 fix the motion for 008.json projectiles  
+
+!!! 
+/item modify entity @s weapon.mainhand {function:"set_components",components:{equippable:{slot:"legs",equip_sound:{sound_id:"sand:sandevistan.exit"}}}}  
