@@ -11,3 +11,6 @@ you can obtain sandevistan from loot chests in: stronghold libraries, treasure b
 THIS DATAPACK HAS A CORRESPONDING RESOURCEPACK (SandevistanRP)  
 
 (1.21.5)  
+
+(TODO:)  
+fix the motion for 008.json projectiles  
