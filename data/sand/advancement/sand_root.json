@@ -15,7 +15,7 @@
   },
   "criteria": {
     "main": {
-      "trigger": "minecraft:inventory_changed"
+      "trigger": "minecraft:tick"
     }
   }
 }
