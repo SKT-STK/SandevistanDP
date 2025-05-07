@@ -11,7 +11,7 @@
     "announce_to_chat": false,
     "show_toast": false,
     "frame": "task",
-    "background": "minecraft:textures/block/redstone_ore.png"
+    "background": "minecraft:block/redstone_ore"
   },
   "criteria": {
     "main": {
