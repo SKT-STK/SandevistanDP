@@ -1,0 +1,30 @@
+{
+  "type": "empty",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "loot_table",
+          "value": "sand:chests/bastion_treasure_default",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "loot_table",
+          "value": "sand:sand",
+          "conditions": [
+            {
+              "condition": "random_chance",
+              "chance": 0.2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

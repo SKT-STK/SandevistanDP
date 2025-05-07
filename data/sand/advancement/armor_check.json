@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "main": {
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "rewards": {
+    "function": "sand:armor_check"
+  }
+}

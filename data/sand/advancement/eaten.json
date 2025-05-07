@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "main": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "#sand:activators"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "sand:activate/advancement"
+  }
+}

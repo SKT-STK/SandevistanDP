@@ -1,0 +1,10 @@
+{
+  "function": "set_components",
+  "components": {
+    "equippable": {
+      "slot": "head",
+      "equip_sound": "minecraft:item.armor.equip_generic",
+      "camera_overlay": "sand:overlays/overlay0015"
+    }
+  }
+}
