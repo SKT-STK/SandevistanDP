@@ -10,4 +10,4 @@ you can obtain sandevistan from loot chests in: stronghold libraries, treasure b
 !!! IMPORTANT !!!  
 THIS DATAPACK HAS A CORRESPONDING RESOURCEPACK (SandevistanRP)  
 
-(1.21.4)  
+(1.21.5)  
