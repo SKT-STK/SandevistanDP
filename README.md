@@ -11,9 +11,3 @@ you can obtain sandevistan from loot chests in: stronghold libraries, treasure b
 THIS DATAPACK HAS A CORRESPONDING RESOURCEPACK (SandevistanRP)  
 
 (1.21.5)  
-
-(TODO:)  
-fix the motion for 008.json projectiles  
-
-!!! 
-/item modify entity @s weapon.mainhand {function:"set_components",components:{equippable:{slot:"legs",equip_sound:{sound_id:"sand:sandevistan.exit"}}}}  

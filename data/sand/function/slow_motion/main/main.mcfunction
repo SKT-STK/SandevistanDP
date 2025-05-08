@@ -4,7 +4,7 @@ scoreboard players add @s sand.timer.sandevistan 1
 
 execute if entity @s[type=#sand:00001_projectiles] run return run data modify entity @s Motion set value [0d,0.0001d,0d]
 execute if entity @s[type=#sand:0035_projectiles] run return run data modify entity @s Motion set value [0d,0.035d,0d]
-execute if entity @s[type=#sand:008_projectiles] run return run data modify entity @s Motion set value [0d,0.008d,0d]
+execute if entity @s[type=#sand:0055_projectiles] run return run data modify entity @s Motion set value [0d,0.055d,0d]
 execute if entity @s[type=#sand:stationary_projectiles] run return run data modify entity @s Motion set value [0d,0d,0d]
 
 scoreboard players operation %search sand.id.entity = @s sand.id.entity
