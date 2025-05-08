@@ -23,9 +23,6 @@ for i in range(1, 62):
   lines.append(
     f'execute if score @s sand.timer.overlay matches {i} run item modify entity @s armor.head sand:overlays/{pad_4_left(j)}'
   )
-  lines.append(
-    f'execute if score @s sand.timer.overlay matches {i} run return run stopsound @s * minecraft:item.armor.equip_generic'
-  )
 lines.append(
   f'execute if score @s sand.timer.overlay matches 62 run function sand:display_overlay/exit'
 )

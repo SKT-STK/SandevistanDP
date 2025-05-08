@@ -13,7 +13,9 @@ MODIFIER_TEMPLATE = """{{
   "components": {{
     "equippable": {{
       "slot": "head",
-      "equip_sound": "minecraft:item.armor.equip_generic",
+      "equip_sound": {{
+        "sound_id": "sand:silence"
+      }},
       "camera_overlay": "sand:overlays/overlay{}"
     }}
   }}

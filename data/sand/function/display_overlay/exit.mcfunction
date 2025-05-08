@@ -16,4 +16,12 @@ execute unless score @s sand.dead matches 1.. run scoreboard players set @s sand
 scoreboard players operation %search sand.id.player = @s sand.id.player
 execute as @e[tag=sand.sandevistan_applied] if score @s sand.id.player = %search sand.id.player run function sand:slow_motion/end
 execute as @e[type=marker,tag=sand.marker] if score @s sand.id.player = %search sand.id.player run kill @s
-function sand:stop_equip_sound
+
+stopsound @a * minecraft:item.armor.equip_chain
+stopsound @a * minecraft:item.armor.equip_diamond
+stopsound @a * minecraft:item.armor.equip_generic
+stopsound @a * minecraft:item.armor.equip_gold
+stopsound @a * minecraft:item.armor.equip_iron
+stopsound @a * minecraft:item.armor.equip_leather
+stopsound @a * minecraft:item.armor.equip_netherite
+stopsound @a * minecraft:item.armor.equip_turtle
