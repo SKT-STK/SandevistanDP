@@ -1,11 +1,4 @@
-execute if entity @s[type=#sand:exclude] run return -1
-
 scoreboard players add @s sand.timer.sandevistan 1
-
-execute if entity @s[type=#sand:00001_projectiles] run return run data modify entity @s Motion set value [0d,0.0001d,0d]
-execute if entity @s[type=#sand:0035_projectiles] run return run data modify entity @s Motion set value [0d,0.035d,0d]
-execute if entity @s[type=#sand:0055_projectiles] run return run data modify entity @s Motion set value [0d,0.055d,0d]
-execute if entity @s[type=#sand:stationary_projectiles] run return run data modify entity @s Motion set value [0d,0d,0d]
 
 scoreboard players operation %search sand.id.entity = @s sand.id.entity
 execute as @e[type=marker,tag=sand.marker] if score @s sand.id.entity = %search sand.id.entity run tag @s add sand.this
