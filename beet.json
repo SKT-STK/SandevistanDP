@@ -1,0 +1,11 @@
+{
+  "name": "sandevistan",
+  "require": [
+    "bolt"
+  ],
+  "data_pack": {
+    "load": ["src/sandevistan"]
+  },
+  "pipeline": ["mecha"],
+  "output": "build"
+}
