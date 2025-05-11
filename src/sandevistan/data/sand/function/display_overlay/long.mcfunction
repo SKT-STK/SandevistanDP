@@ -1,45 +1,33 @@
+item_modifier_dict = {
+  function: 'set_components',
+  components: {
+    equippable: {
+      slot: 'head',
+      equip_sound: {
+        sound_id: 'sand:silence'
+      }
+    }
+  }
+}
+
+def pad_4_left(x: int) -> str:
+  x_str = str(x)
+  zeros_to_add = 4 - len(x_str)
+  return f'sand:overlays/overlay{"0" * zeros_to_add}{x}'
+
 execute if score @s sand.timer.overlay matches 1 run playsound sand:sandevistan.entry master @a ~ ~ ~ 0.5
-execute if score @s sand.timer.overlay matches 1 run item modify entity @s armor.head sand:overlays/0001
-execute if score @s sand.timer.overlay matches 2 run item modify entity @s armor.head sand:overlays/0002
-execute if score @s sand.timer.overlay matches 3 run item modify entity @s armor.head sand:overlays/0003
-execute if score @s sand.timer.overlay matches 4 run item modify entity @s armor.head sand:overlays/0004
-execute if score @s sand.timer.overlay matches 5 run item modify entity @s armor.head sand:overlays/0005
-execute if score @s sand.timer.overlay matches 6 run item modify entity @s armor.head sand:overlays/0006
-execute if score @s sand.timer.overlay matches 7 run item modify entity @s armor.head sand:overlays/0007
-execute if score @s sand.timer.overlay matches 8 run item modify entity @s armor.head sand:overlays/0008
-execute if score @s sand.timer.overlay matches 9 run item modify entity @s armor.head sand:overlays/0009
-execute if score @s sand.timer.overlay matches 10 run item modify entity @s armor.head sand:overlays/0010
-execute if score @s sand.timer.overlay matches 11 run item modify entity @s armor.head sand:overlays/0011
-execute if score @s sand.timer.overlay matches 12 run item modify entity @s armor.head sand:overlays/0012
-execute if score @s sand.timer.overlay matches 13 run item modify entity @s armor.head sand:overlays/0013
-execute if score @s sand.timer.overlay matches 14 run item modify entity @s armor.head sand:overlays/0014
-execute if score @s sand.timer.overlay matches 15 run item modify entity @s armor.head sand:overlays/0015
-execute if score @s sand.timer.overlay matches 16 run item modify entity @s armor.head sand:overlays/0016
-execute if score @s sand.timer.overlay matches 17 run item modify entity @s armor.head sand:overlays/0017
-execute if score @s sand.timer.overlay matches 18 run item modify entity @s armor.head sand:overlays/0018
-execute if score @s sand.timer.overlay matches 19 run item modify entity @s armor.head sand:overlays/0019
-execute if score @s sand.timer.overlay matches 20 run item modify entity @s armor.head sand:overlays/0020
-execute if score @s sand.timer.overlay matches 21 run item modify entity @s armor.head sand:overlays/0021
-execute if score @s sand.timer.overlay matches 181 run item modify entity @s armor.head sand:overlays/0021
-execute if score @s sand.timer.overlay matches 182 run item modify entity @s armor.head sand:overlays/0022
-execute if score @s sand.timer.overlay matches 183 run item modify entity @s armor.head sand:overlays/0023
-execute if score @s sand.timer.overlay matches 184 run item modify entity @s armor.head sand:overlays/0024
-execute if score @s sand.timer.overlay matches 185 run item modify entity @s armor.head sand:overlays/0025
-execute if score @s sand.timer.overlay matches 186 run item modify entity @s armor.head sand:overlays/0026
-execute if score @s sand.timer.overlay matches 187 run item modify entity @s armor.head sand:overlays/0027
-execute if score @s sand.timer.overlay matches 188 run item modify entity @s armor.head sand:overlays/0028
-execute if score @s sand.timer.overlay matches 189 run item modify entity @s armor.head sand:overlays/0029
-execute if score @s sand.timer.overlay matches 190 run item modify entity @s armor.head sand:overlays/0030
-execute if score @s sand.timer.overlay matches 192 run playsound sand:sandevistan.exit master @a ~ ~ ~ 0.5
-execute if score @s sand.timer.overlay matches 191 run item modify entity @s armor.head sand:overlays/0031
-execute if score @s sand.timer.overlay matches 192 run item modify entity @s armor.head sand:overlays/0032
-execute if score @s sand.timer.overlay matches 193 run item modify entity @s armor.head sand:overlays/0033
-execute if score @s sand.timer.overlay matches 194 run item modify entity @s armor.head sand:overlays/0034
-execute if score @s sand.timer.overlay matches 195 run item modify entity @s armor.head sand:overlays/0035
-execute if score @s sand.timer.overlay matches 196 run item modify entity @s armor.head sand:overlays/0036
-execute if score @s sand.timer.overlay matches 197 run item modify entity @s armor.head sand:overlays/0037
-execute if score @s sand.timer.overlay matches 198 run item modify entity @s armor.head sand:overlays/0038
-execute if score @s sand.timer.overlay matches 199 run item modify entity @s armor.head sand:overlays/0039
-execute if score @s sand.timer.overlay matches 200 run item modify entity @s armor.head sand:overlays/0040
-execute if score @s sand.timer.overlay matches 201 run item modify entity @s armor.head sand:overlays/0041
+
+for i in range(1, 202):
+  j = i
+  if i > 21 and i < 181:
+    continue
+  if i >= 181:
+    j = i - 160
+  if i == 191:
+    execute if score @s sand.timer.overlay matches 192 run playsound sand:sandevistan.exit master @a ~ ~ ~ 0.5
+    
+  item_modifier = item_modifier_dict
+  item_modifier['components']['equippable']['camera_overlay'] = pad_4_left(j)
+  execute if score @s sand.timer.overlay matches i run item modify entity @s armor.head item_modifier
+
 execute if score @s sand.timer.overlay matches 202 run function sand:display_overlay/exit

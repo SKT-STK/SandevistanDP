@@ -1,4 +1,13 @@
-execute if items entity @s weapon.mainhand #sand:make_consumable[!minecraft:consumable] run item modify entity @s weapon.mainhand sand:make_food
+make_food = {
+  "function": "minecraft:set_components",
+  "components": {
+    "consumable": {
+      "consume_seconds": 2147483647
+    }
+  }
+}
+
+execute if items entity @s weapon.mainhand #sand:make_consumable[!minecraft:consumable] run item modify entity @s weapon.mainhand make_food
 
 execute if score @s sand.BOOL.activate matches 0..1 run function sand:display_overlay/timer
 execute if score @s sand.BOOL.activate matches 0..1 run function sand:slow_motion/main/self
