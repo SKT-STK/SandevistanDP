@@ -4,7 +4,10 @@
     "bolt"
   ],
   "data_pack": {
-    "load": ["src/sandevistan"]
+    "load": ["src/sandevistan_dp"]
+  },
+  "resource_pack": {
+    "load": ["src/sandevistan_rp"]
   },
   "pipeline": ["mecha"],
   "output": "build"
