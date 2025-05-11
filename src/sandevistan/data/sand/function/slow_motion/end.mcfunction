@@ -5,7 +5,9 @@ execute store result entity @s Motion[2] double 0.001 run scoreboard players get
 tag @s remove sand.sandevistan_applied
 effect clear @s resistance
 
-execute if entity @s[type=#sand:projectiles] run return run function sand:slow_motion/end/projectiles
+execute if entity @s[type=#sand:projectiles] run return run execute:
+  data modify entity @s NoGravity set value false
+  execute store result entity @s attributes[{id:"minecraft:movement_speed"}].base double .01 run scoreboard players get @s sand.entity.attributes.movement_speed
 
 execute store result score @s sand.damage.health run data get entity @s Health
 scoreboard players operation @s sand.damage.health *= %10 sand.CONST

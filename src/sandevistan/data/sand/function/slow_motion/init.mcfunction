@@ -8,7 +8,12 @@ tag @s add sand.sandevistan_applied
 effect give @s minecraft:resistance infinite 255 true
 
 scoreboard players operation @s sand.id.player = @p[scores={sand.BOOL.activate=1}] sand.id.player
-execute if entity @s[type=#sand:projectiles] run return run function sand:slow_motion/init/projectiles
+execute if entity @s[type=#sand:projectiles] run return run execute:
+  execute store result score @s sand.entity.attributes.movement_speed run attribute @s movement_speed get 100
+
+  data modify entity @s NoGravity set value true
+  attribute @s movement_speed base set 0
+  data modify entity @s Motion set value [0d,0d,0d]
 scoreboard players add %global sand.id.entity 1
 scoreboard players operation @s sand.id.entity = %global sand.id.entity
 summon marker ~ ~ ~ {Tags:["sand.marker", "sand.this2"]}
