@@ -10,6 +10,6 @@ you can obtain sandevistan from loot chests in: stronghold libraries, treasure b
 to use the datapack install python along with 'beet' and 'bolt' and run the Makefile, afterwords copy the sandevistan_data_pack folder from build/ to your world's datapack folder  
 
 !!! IMPORTANT !!!  
-THIS DATAPACK HAS A CORRESPONDING RESOURCEPACK (SandevistanRP)  
+THIS DATAPACK HAS A CORRESPONDING RESOURCEPACK (sandevistan_resource_pack in the build directory alongside _data_pack)  
 
 (1.21.5)  
