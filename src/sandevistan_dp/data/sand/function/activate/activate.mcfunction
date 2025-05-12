@@ -1,5 +1,5 @@
-execute if entity @s[scores={sand.armor_count=1..}] if score @s sand.BOOL.activate matches 1 run scoreboard players set @s sand.BOOL.activate 0
-execute if entity @s[scores={sand.armor_count=1..}] unless score @s sand.BOOL.activate matches 0..1 unless score @s sand.BOOL.regenerate matches 1:
+execute if entity @s[scores={sand.count.armor=1..}] if score @s sand.BOOL.activate matches 1 run scoreboard players set @s sand.BOOL.activate 0
+execute if entity @s[scores={sand.count.armor=1..}] unless score @s sand.BOOL.activate matches 0..1 unless score @s sand.BOOL.regenerate matches 1:
   scoreboard players set @s sand.BOOL.activate 1
   scoreboard players add $global sand.id.player 1
   scoreboard players operation @s sand.id.player = $global sand.id.player
@@ -21,7 +21,7 @@ execute if entity @s[scores={sand.armor_count=1..}] unless score @s sand.BOOL.ac
   item modify entity @s armor.legs sand:apply_binding_curse
   item modify entity @s armor.feet sand:apply_binding_curse
   scoreboard players reset @s sand.BOOL.regenerate
-  execute if score @s sand.armor_count matches 4 run scoreboard players set @s sand.timer.charge.full 202
-  execute if score @s sand.armor_count matches ..3 run scoreboard players set @s sand.timer.charge.full 42
+  execute if score @s sand.count.armor matches 4 run scoreboard players set @s sand.timer.charge.full 202
+  execute if score @s sand.count.armor matches ..3 run scoreboard players set @s sand.timer.charge.full 42
   scoreboard players operation @s sand.timer.charge = @s sand.timer.charge.full
   advancement grant @s only sand:sand

@@ -1,6 +1,6 @@
 tellraw @a "Sandevistan Datapack Loaded Successfully!"
 
-scoreboard objectives add sand.armor_count dummy
+scoreboard objectives add sand.count.armor dummy
 scoreboard objectives add sand.timer.overlay dummy
 scoreboard objectives add sand.timer.sandevistan dummy
 scoreboard objectives add sand.timer.charge dummy
