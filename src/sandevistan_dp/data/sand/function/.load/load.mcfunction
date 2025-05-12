@@ -16,7 +16,6 @@ scoreboard objectives add sand.entity.motion.x dummy
 scoreboard objectives add sand.entity.motion.y dummy
 scoreboard objectives add sand.entity.motion.z dummy
 scoreboard objectives add sand.entity.fuse dummy
-scoreboard objectives add sand.entity.attributes.movement_speed dummy
 scoreboard objectives add sand.damage.dealt minecraft.custom:minecraft.damage_dealt_resisted
 scoreboard objectives add sand.damage.taken dummy
 scoreboard objectives add sand.damage.temp dummy

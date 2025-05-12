@@ -1,8 +1,8 @@
 make_food = {
-  "function": "minecraft:set_components",
-  "components": {
-    "consumable": {
-      "consume_seconds": 2147483647
+  function: 'minecraft:set_components',
+  components: {
+    consumable: {
+      consume_seconds: 2147483647
     }
   }
 }
