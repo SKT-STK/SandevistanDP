@@ -14,9 +14,9 @@ execute if entity @s[type=#sand:projectiles] run return run execute:
   data modify entity @s NoGravity set value true
   attribute @s movement_speed base set 0
   data modify entity @s Motion set value [0d,0d,0d]
-scoreboard players add %global sand.id.entity 1
-scoreboard players operation @s sand.id.entity = %global sand.id.entity
+scoreboard players add $global sand.id.entity 1
+scoreboard players operation @s sand.id.entity = $global sand.id.entity
 summon marker ~ ~ ~ {Tags:["sand.marker", "sand.this2"]}
-scoreboard players operation @n[tag=sand.this2] sand.id.entity = %global sand.id.entity
+scoreboard players operation @n[tag=sand.this2] sand.id.entity = $global sand.id.entity
 scoreboard players operation @n[tag=sand.this2] sand.id.player = @p[scores={sand.BOOL.activate=1}] sand.id.player
 tag @n[tag=sand.this2] remove sand.this2

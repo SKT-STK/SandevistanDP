@@ -28,5 +28,7 @@ scoreboard objectives add sand.dead deathCount
 
 scoreboard players reset * sand.CONST
 
-scoreboard players set %10 sand.CONST 10
-scoreboard players set %0 sand.CONST 0
+scoreboard players set #10 sand.CONST 10
+scoreboard players set #0 sand.CONST 0
+
+gamerule maxCommandChainLength 2147483647

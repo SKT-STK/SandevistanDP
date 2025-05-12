@@ -1,7 +1,7 @@
 scoreboard players add @s sand.timer.sandevistan 1
 
-scoreboard players operation %search sand.id.entity = @s sand.id.entity
-execute as @e[type=marker,tag=sand.marker] if score @s sand.id.entity = %search sand.id.entity run tag @s add sand.this
+scoreboard players operation $search sand.id.entity = @s sand.id.entity
+execute as @e[type=marker,tag=sand.marker] if score @s sand.id.entity = $search sand.id.entity run tag @s add sand.this
 execute at @e[tag=sand.this] run tp @s ~ ~ ~
 tag @e[tag=sand.this] remove sand.this
 

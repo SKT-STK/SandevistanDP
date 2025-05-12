@@ -15,9 +15,9 @@ execute if score @s sand.BOOL.has_binding_curse.chest matches 0 run item modify 
 execute if score @s sand.BOOL.has_binding_curse.legs matches 0 run item modify entity @s armor.legs sand:remove_binding_curse
 execute if score @s sand.BOOL.has_binding_curse.feet matches 0 run item modify entity @s armor.feet sand:remove_binding_curse
 execute unless score @s sand.dead matches 1.. run scoreboard players set @s sand.BOOL.regenerate 1
-scoreboard players operation %search sand.id.player = @s sand.id.player
-execute as @e[tag=sand.sandevistan_applied] if score @s sand.id.player = %search sand.id.player run function sand:slow_motion/end
-execute as @e[type=marker,tag=sand.marker] if score @s sand.id.player = %search sand.id.player run kill @s
+scoreboard players operation $search sand.id.player = @s sand.id.player
+execute as @e[tag=sand.sandevistan_applied] if score @s sand.id.player = $search sand.id.player run function sand:slow_motion/end
+execute as @e[type=marker,tag=sand.marker] if score @s sand.id.player = $search sand.id.player run kill @s
 
 stopsound @a * minecraft:item.armor.equip_chain
 stopsound @a * minecraft:item.armor.equip_diamond
