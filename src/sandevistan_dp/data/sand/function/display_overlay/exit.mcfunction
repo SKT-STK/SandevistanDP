@@ -1,10 +1,12 @@
 scoreboard players reset @s sand.BOOL.activate
 scoreboard players reset @s sand.timer.overlay
-execute if score @s sand.BOOL.has_speed matches 1 run effect clear @s speed
+execute store result score @s sand.entity.movement_speed run attribute @s minecraft:movement_speed base get 100
+execute store result storage sand:movement_speed base double 0.01 run scoreboard players operation @s sand.entity.movement_speed -= $2 sand.CONST
+function(with storage sand:movement_speed):
+  $attribute @s minecraft:movement_speed base set $(base)
 summon item ~ ~ ~ {Item:{id:dirt},Tags:["sand.item"],PickupDelay:-1}
-function sand:_/exit_m:
+function(with entity @s):
   $data modify entity @n[tag=sand.item] Item set from storage sand:head_item "$(UUID)"
-function sand:_/exit_m with entity @s
 execute unless score @s sand.dead matches 1.. run item replace entity @s armor.head from entity @n[tag=sand.item] contents
 execute if score @s sand.dead matches 1.. run item replace entity @n[type=item,nbt={Item:{components:{"minecraft:custom_data":{"sand.sand":true}}}}] contents from entity @n[tag=sand.item] contents
 kill @e[tag=sand.item]

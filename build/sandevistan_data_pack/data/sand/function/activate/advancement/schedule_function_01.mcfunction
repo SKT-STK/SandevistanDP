@@ -1,2 +1,2 @@
-tag @s add b27d7a6f-8bed-41a5-8fec-571acf8434f3
+tag @s add dd16a828-e5b3-4026-b459-da25f68f6fa6
 schedule function sand:activate/advancement/schedule_function_02 2

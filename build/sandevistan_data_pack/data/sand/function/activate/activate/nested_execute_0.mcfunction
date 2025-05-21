@@ -1,8 +1,9 @@
 scoreboard players set @s sand.BOOL.activate 1
 scoreboard players add $global sand.id.player 1
 scoreboard players operation @s sand.id.player = $global sand.id.player
-execute store success score @s sand.BOOL.has_speed run effect give @s speed infinite 0
-execute if score @s sand.BOOL.has_speed matches 1 run effect give @s speed infinite 0 true
+execute store result score @s sand.entity.movement_speed run attribute @s minecraft:movement_speed base get 100
+execute store result storage sand:movement_speed base double 0.01 run scoreboard players operation @s sand.entity.movement_speed += $2 sand.CONST
+function sand:activate/activate/macro_1 with storage sand:movement_speed
 function sand:activate/activate/macro_0 with entity @s
 execute if items entity @s armor.head * run item replace entity @s armor.head with barrier[custom_data={sand.sand: true, sand.helmet: true}, enchantments={binding_curse: 1}, equippable={slot: "head", equip_sound: {sound_id: "sand:silence"}}]
 execute unless items entity @s armor.head * run item replace entity @s armor.head with barrier[custom_data={sand.sand: true}, enchantments={binding_curse: 1}, equippable={slot: "head", equip_sound: {sound_id: "sand:silence"}}]

@@ -3,12 +3,10 @@ execute if entity @s[scores={sand.count.armor=1..}] unless score @s sand.BOOL.ac
   scoreboard players set @s sand.BOOL.activate 1
   scoreboard players add $global sand.id.player 1
   scoreboard players operation @s sand.id.player = $global sand.id.player
-  execute store success score @s sand.BOOL.has_speed run effect give @s speed infinite 0
-  execute if score @s sand.BOOL.has_speed matches 1 run effect give @s speed infinite 0 true
-  # function sand:_/activate_m:
-  #   $data remove storage sand:head_item "$(UUID)"
-  #   $data modify storage sand:head_item "$(UUID)" set from entity @s equipment.head
-  # function sand:_/activate_m with entity @s
+  execute store result score @s sand.entity.movement_speed run attribute @s minecraft:movement_speed base get 100
+  execute store result storage sand:movement_speed base double 0.01 run scoreboard players operation @s sand.entity.movement_speed += $2 sand.CONST
+  function(with storage sand:movement_speed):
+    $attribute @s minecraft:movement_speed base set $(base)
   function(with entity @s):
     $data remove storage sand:head_item "$(UUID)"
     $data modify storage sand:head_item "$(UUID)" set from entity @s equipment.head
