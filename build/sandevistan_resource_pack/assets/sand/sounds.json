@@ -1,0 +1,11 @@
+{
+  "sandevistan.entry": {
+    "sounds": ["sand:sandevistan/entry"]
+  },
+  "sandevistan.exit": {
+    "sounds": ["sand:sandevistan/exit"]
+  },
+  "sandevistan.recharge": {
+    "sounds": ["sand:sandevistan/recharge"]
+  }
+}

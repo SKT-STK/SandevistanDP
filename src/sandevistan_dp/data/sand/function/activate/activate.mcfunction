@@ -5,10 +5,13 @@ execute if entity @s[scores={sand.count.armor=1..}] unless score @s sand.BOOL.ac
   scoreboard players operation @s sand.id.player = $global sand.id.player
   execute store success score @s sand.BOOL.has_speed run effect give @s speed infinite 0
   execute if score @s sand.BOOL.has_speed matches 1 run effect give @s speed infinite 0 true
-  function sand:_/activate_m:
+  # function sand:_/activate_m:
+  #   $data remove storage sand:head_item "$(UUID)"
+  #   $data modify storage sand:head_item "$(UUID)" set from entity @s equipment.head
+  # function sand:_/activate_m with entity @s
+  function(with entity @s):
     $data remove storage sand:head_item "$(UUID)"
     $data modify storage sand:head_item "$(UUID)" set from entity @s equipment.head
-  function sand:_/activate_m with entity @s
   execute if items entity @s armor.head * run item replace entity @s armor.head with barrier[custom_data={"sand.sand":true,"sand.helmet":true},enchantments={binding_curse:1},equippable={slot:"head",equip_sound:{sound_id:"sand:silence"}}]
   execute unless items entity @s armor.head * run item replace entity @s armor.head with barrier[custom_data={"sand.sand":true},enchantments={binding_curse:1},equippable={slot:"head",equip_sound:{sound_id:"sand:silence"}}]
   execute unless items entity @s armor.chest * run item replace entity @s armor.chest with barrier[custom_data={"sand.placeholder":true},equippable={slot:"chest",equip_sound:{sound_id:"sand:silence"}}]

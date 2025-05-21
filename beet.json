@@ -9,6 +9,6 @@
   "resource_pack": {
     "load": ["src/sandevistan_rp"]
   },
-  "pipeline": ["mecha"],
+  "pipeline": ["skt_stk.inline", "mecha", "skt_stk.schedule"],
   "output": "build"
 }

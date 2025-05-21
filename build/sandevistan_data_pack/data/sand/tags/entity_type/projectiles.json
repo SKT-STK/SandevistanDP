@@ -1,0 +1,16 @@
+{
+  "values": [
+    "minecraft:fireball",
+    "minecraft:small_fireball",
+    "minecraft:dragon_fireball",
+    "minecraft:wither_skull",
+    "#minecraft:arrows",
+    "minecraft:trident",
+    "minecraft:egg",
+    "minecraft:snowball",
+    "minecraft:ender_pearl",
+    "minecraft:splash_potion",
+    "minecraft:lingering_potion",
+    "minecraft:experience_bottle"
+  ]
+}

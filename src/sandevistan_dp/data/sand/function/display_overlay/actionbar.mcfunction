@@ -1,5 +1,5 @@
 scoreboard players operation @s sand.timer.charge.percent = @s sand.timer.charge
-scoreboard players operation @s sand.timer.charge.percent *= #10 sand.CONST
+scoreboard players operation @s sand.timer.charge.percent *= $10 sand.CONST
 scoreboard players operation @s sand.timer.charge.percent /= @s sand.timer.charge.full
 
 execute if score @s sand.timer.charge.percent matches 10 run scoreboard players reset @s sand.BOOL.regenerate

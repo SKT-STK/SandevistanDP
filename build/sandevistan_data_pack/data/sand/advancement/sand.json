@@ -1,0 +1,21 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:dirt",
+      "components": {
+        "minecraft:item_model": "sand:pack"
+      }
+    },
+    "title": "That's some preem enchantments choom!",
+    "description": "Activate sandevistan for the first time.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "sand:sand_root",
+  "criteria": {
+    "main": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:dirt",
+      "components": {
+        "item_model": "sand:pack"
+      }
+    },
+    "title": "SandevistanDP",
+    "description": "",
+    "announce_to_chat": false,
+    "show_toast": false,
+    "frame": "task",
+    "background": "minecraft:block/redstone_ore"
+  },
+  "criteria": {
+    "main": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}
